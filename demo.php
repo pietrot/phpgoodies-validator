@@ -13,6 +13,8 @@ $input = array(
     'weight' => "It's none of your concern!"
 );
 
+// @note If the field is not required and no value is given, we skip it's validation.
+
 $result = Validator::validate($input)
     ->verify('id', 'required')
     ->verify('name', 'required|alpha')
