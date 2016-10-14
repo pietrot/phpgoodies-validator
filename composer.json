@@ -1,0 +1,9 @@
+{
+    "name": "pietrot/phpgoodies-validator",
+    "description": "An input validator for PHP.",
+    "autoload": {
+        "psr-4" : {
+            "PHPGoodies\\" : "src/"
+        }
+    }
+}
