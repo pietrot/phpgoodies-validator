@@ -19,6 +19,20 @@ $result = Validator::validate({data:array})
 - Additional arguments (such as min/max value, etc.) are separated by a ":".
   Example: "required|min:5|max:10"
 
+### Custom messages
+
+Adding custom messages is a breeze. Simply provide an associative array with keys being the rule,
+and values being the messages when errors are caught.
+
+Example:
+
+```
+$result = Validator::validate([])
+    ->verify('name', 'required', ['name' => "Don't you be missin' no name!"])
+    ->run();
+
+```
+
 ### Result
 
 The result returned from running the validator is of type ValidatorResult. A helper function is
