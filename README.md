@@ -28,7 +28,7 @@ Example:
 
 ```
 $result = Validator::validate([])
-    ->verify('name', 'required', ['name' => "Don't you be missin' no name!"])
+    ->verify('name', 'required', ['required' => "Don't you be missin' no name!"])
     ->run();
 
 ```
