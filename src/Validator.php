@@ -411,8 +411,8 @@ class Validator {
         }
         
         return (bool)preg_match('/^[\-+]?'.
-            '([0-9]' . ((!is_null($whole_num_len)) ? "{1,$whole_num_len}" : '+') . ')\.' .
-            '([0-9]' . ((!is_null($scale)) ? "{1,$scale}" : '+') . ')$/', $input);
+            '([0-9]' . ((!is_null($whole_num_len)) ? "{1,$whole_num_len}" : '+') . ')\.?' .
+            '([0-9]' . ((!is_null($scale)) ? "{1,$scale}" : '+') . ')?$/', $input);
     }
     
     /**
